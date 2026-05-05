@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#1E1E1E">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PERFORMANCE REPORT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time Comparison"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#AAAAAA"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Java Time Bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Java Time" android:textColor="#FF4444" android:textStyle="bold" />
+        <ProgressBar android:id="@+id/pbReportJavaTime" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:max="1000" android:progressTint="#FF4444" />
+        <TextView android:id="@+id/tvReportJavaTime" android:layout_width="60dp" android:layout_height="wrap_content" android:text="0 ms" android:textColor="#FFFFFF" android:gravity="end" />
+    </LinearLayout>
+
+    <!-- PTA Time Bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="24dp">
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="PTA Time" android:textColor="#0066FF" android:textStyle="bold" />
+        <ProgressBar android:id="@+id/pbReportPtaTime" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:max="1000" android:progressTint="#0066FF" />
+        <TextView android:id="@+id/tvReportPtaTime" android:layout_width="60dp" android:layout_height="wrap_content" android:text="0 ms" android:textColor="#FFFFFF" android:gravity="end" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Active Cores Utilization"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#AAAAAA"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Java Core Bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Java Cores" android:textColor="#FF4444" android:textStyle="bold" />
+        <ProgressBar android:id="@+id/pbReportJavaCores" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:max="8" android:progressTint="#FF4444" android:progress="1" />
+        <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="1 / 8" android:textColor="#FFFFFF" android:gravity="end" />
+    </LinearLayout>
+
+    <!-- PTA Core Bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="24dp">
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="PTA Cores" android:textColor="#0066FF" android:textStyle="bold" />
+        <ProgressBar android:id="@+id/pbReportPtaCores" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:max="8" android:progressTint="#0066FF" android:progress="8" />
+        <TextView android:id="@+id/tvReportPtaCores" android:layout_width="60dp" android:layout_height="wrap_content" android:text="8 / 8" android:textColor="#FFFFFF" android:gravity="end" />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/tvReportConclusion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Conclusion: PTA is X times faster by utilizing 100% of available Snapdragon Oryon Cores through bare-metal JNI integration."
+        android:textSize="14sp"
+        android:textColor="#00FFFF"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnExportPdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export PDF Report"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnCloseReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close Report"
+        android:backgroundTint="#444444"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#1E1E1E">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ORYON CORE UTILIZATION"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Real-time sysfs hardware polling"
+        android:textSize="12sp"
+        android:textColor="#AAAAAA"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Core 0-7 Progress Bars -->
+    <LinearLayout android:id="@+id/coreContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <!-- Generated dynamically or we can just hardcode 8 bars for simplicity -->
+        <!-- Core 0 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+            <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="Core 0" android:textColor="#00FF00" android:textStyle="bold" />
+            <ProgressBar android:id="@+id/pbCore0" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:max="100" android:progressTint="#00FF00" />
+        </LinearLayout>
+        <!-- Core 1 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+            <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="Core 1" android:textColor="#00FF00" android:textStyle="bold" />
+            <ProgressBar android:id="@+id/pbCore1" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:max="100" android:progressTint="#00FF00" />
+        </LinearLayout>
+        <!-- Core 2 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+            <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="Core 2" android:textColor="#00FF00" android:textStyle="bold" />
+            <ProgressBar android:id="@+id/pbCore2" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:max="100" android:progressTint="#00FF00" />
+        </LinearLayout>
+        <!-- Core 3 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+            <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="Core 3" android:textColor="#00FF00" android:textStyle="bold" />
+            <ProgressBar android:id="@+id/pbCore3" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:max="100" android:progressTint="#00FF00" />
+        </LinearLayout>
+        <!-- Core 4 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+            <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="Core 4" android:textColor="#00FFFF" android:textStyle="bold" />
+            <ProgressBar android:id="@+id/pbCore4" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:max="100" android:progressTint="#00FFFF" />
+        </LinearLayout>
+        <!-- Core 5 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+            <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="Core 5" android:textColor="#00FFFF" android:textStyle="bold" />
+            <ProgressBar android:id="@+id/pbCore5" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:max="100" android:progressTint="#00FFFF" />
+        </LinearLayout>
+        <!-- Core 6 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+            <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="Core 6" android:textColor="#00FFFF" android:textStyle="bold" />
+            <ProgressBar android:id="@+id/pbCore6" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:max="100" android:progressTint="#00FFFF" />
+        </LinearLayout>
+        <!-- Core 7 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+            <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="Core 7" android:textColor="#FF00FF" android:textStyle="bold" />
+            <ProgressBar android:id="@+id/pbCore7" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="20dp" android:layout_weight="1" android:max="100" android:progressTint="#FF00FF" />
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/btnCloseMonitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close Dashboard"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#444444"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

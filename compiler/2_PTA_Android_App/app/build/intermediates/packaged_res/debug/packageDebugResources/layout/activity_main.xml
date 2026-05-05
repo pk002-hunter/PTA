@@ -146,4 +146,155 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btnShowReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Performance Report"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp" />
+
+    <!-- Live CPU Monitor Embedded -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#222222"
+        android:padding="8dp"
+        android:layout_marginTop="8dp">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LIVE CPU UTILIZATION"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_marginBottom="4dp"/>
+            
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <!-- Left Column (Cores 0-3) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+                
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="45dp" android:layout_height="wrap_content" android:text="C0" android:textColor="#00FF00" android:textSize="10sp"/>
+                    <ProgressBar android:id="@+id/pbCore0" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="#00FF00" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="45dp" android:layout_height="wrap_content" android:text="C1" android:textColor="#00FF00" android:textSize="10sp"/>
+                    <ProgressBar android:id="@+id/pbCore1" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="#00FF00" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="45dp" android:layout_height="wrap_content" android:text="C2" android:textColor="#00FF00" android:textSize="10sp"/>
+                    <ProgressBar android:id="@+id/pbCore2" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="#00FF00" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="45dp" android:layout_height="wrap_content" android:text="C3" android:textColor="#00FF00" android:textSize="10sp"/>
+                    <ProgressBar android:id="@+id/pbCore3" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="#00FF00" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Right Column (Cores 4-7) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+                
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="45dp" android:layout_height="wrap_content" android:text="C4" android:textColor="#00FFFF" android:textSize="10sp"/>
+                    <ProgressBar android:id="@+id/pbCore4" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="#00FFFF" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="45dp" android:layout_height="wrap_content" android:text="C5" android:textColor="#00FFFF" android:textSize="10sp"/>
+                    <ProgressBar android:id="@+id/pbCore5" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="#00FFFF" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="45dp" android:layout_height="wrap_content" android:text="C6" android:textColor="#00FFFF" android:textSize="10sp"/>
+                    <ProgressBar android:id="@+id/pbCore6" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="#00FFFF" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="45dp" android:layout_height="wrap_content" android:text="C7" android:textColor="#FF00FF" android:textSize="10sp"/>
+                    <ProgressBar android:id="@+id/pbCore7" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="#FF00FF" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switchParallel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enable Multi-Core Parallel Execution"
+        android:textStyle="bold"
+        android:checked="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Filter Selection & Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <!-- Spinner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Filter: "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerFilters"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/filter_options" />
+        </LinearLayout>
+
+        <!-- Brightness Slider -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brightness: "
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekBarBrightness"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="50" />
+
+    </LinearLayout>
+
+</LinearLayout>
 </LinearLayout>

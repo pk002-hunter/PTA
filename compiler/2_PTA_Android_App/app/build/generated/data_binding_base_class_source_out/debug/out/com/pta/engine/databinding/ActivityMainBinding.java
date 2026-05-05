@@ -7,6 +7,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
+import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,7 +29,43 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnProcess;
 
   @NonNull
+  public final Button btnShowReport;
+
+  @NonNull
   public final Button btnUploadImage;
+
+  @NonNull
+  public final ProgressBar pbCore0;
+
+  @NonNull
+  public final ProgressBar pbCore1;
+
+  @NonNull
+  public final ProgressBar pbCore2;
+
+  @NonNull
+  public final ProgressBar pbCore3;
+
+  @NonNull
+  public final ProgressBar pbCore4;
+
+  @NonNull
+  public final ProgressBar pbCore5;
+
+  @NonNull
+  public final ProgressBar pbCore6;
+
+  @NonNull
+  public final ProgressBar pbCore7;
+
+  @NonNull
+  public final SeekBar seekBarBrightness;
+
+  @NonNull
+  public final Spinner spinnerFilters;
+
+  @NonNull
+  public final Switch switchParallel;
 
   @NonNull
   public final ImageView textureViewJava;
@@ -40,12 +80,28 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView tvPtaTime;
 
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button btnProcess,
-      @NonNull Button btnUploadImage, @NonNull ImageView textureViewJava,
-      @NonNull ImageView textureViewPta, @NonNull TextView tvJavaTime,
-      @NonNull TextView tvPtaTime) {
+      @NonNull Button btnShowReport, @NonNull Button btnUploadImage, @NonNull ProgressBar pbCore0,
+      @NonNull ProgressBar pbCore1, @NonNull ProgressBar pbCore2, @NonNull ProgressBar pbCore3,
+      @NonNull ProgressBar pbCore4, @NonNull ProgressBar pbCore5, @NonNull ProgressBar pbCore6,
+      @NonNull ProgressBar pbCore7, @NonNull SeekBar seekBarBrightness,
+      @NonNull Spinner spinnerFilters, @NonNull Switch switchParallel,
+      @NonNull ImageView textureViewJava, @NonNull ImageView textureViewPta,
+      @NonNull TextView tvJavaTime, @NonNull TextView tvPtaTime) {
     this.rootView = rootView;
     this.btnProcess = btnProcess;
+    this.btnShowReport = btnShowReport;
     this.btnUploadImage = btnUploadImage;
+    this.pbCore0 = pbCore0;
+    this.pbCore1 = pbCore1;
+    this.pbCore2 = pbCore2;
+    this.pbCore3 = pbCore3;
+    this.pbCore4 = pbCore4;
+    this.pbCore5 = pbCore5;
+    this.pbCore6 = pbCore6;
+    this.pbCore7 = pbCore7;
+    this.seekBarBrightness = seekBarBrightness;
+    this.spinnerFilters = spinnerFilters;
+    this.switchParallel = switchParallel;
     this.textureViewJava = textureViewJava;
     this.textureViewPta = textureViewPta;
     this.tvJavaTime = tvJavaTime;
@@ -85,9 +141,81 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnShowReport;
+      Button btnShowReport = ViewBindings.findChildViewById(rootView, id);
+      if (btnShowReport == null) {
+        break missingId;
+      }
+
       id = R.id.btnUploadImage;
       Button btnUploadImage = ViewBindings.findChildViewById(rootView, id);
       if (btnUploadImage == null) {
+        break missingId;
+      }
+
+      id = R.id.pbCore0;
+      ProgressBar pbCore0 = ViewBindings.findChildViewById(rootView, id);
+      if (pbCore0 == null) {
+        break missingId;
+      }
+
+      id = R.id.pbCore1;
+      ProgressBar pbCore1 = ViewBindings.findChildViewById(rootView, id);
+      if (pbCore1 == null) {
+        break missingId;
+      }
+
+      id = R.id.pbCore2;
+      ProgressBar pbCore2 = ViewBindings.findChildViewById(rootView, id);
+      if (pbCore2 == null) {
+        break missingId;
+      }
+
+      id = R.id.pbCore3;
+      ProgressBar pbCore3 = ViewBindings.findChildViewById(rootView, id);
+      if (pbCore3 == null) {
+        break missingId;
+      }
+
+      id = R.id.pbCore4;
+      ProgressBar pbCore4 = ViewBindings.findChildViewById(rootView, id);
+      if (pbCore4 == null) {
+        break missingId;
+      }
+
+      id = R.id.pbCore5;
+      ProgressBar pbCore5 = ViewBindings.findChildViewById(rootView, id);
+      if (pbCore5 == null) {
+        break missingId;
+      }
+
+      id = R.id.pbCore6;
+      ProgressBar pbCore6 = ViewBindings.findChildViewById(rootView, id);
+      if (pbCore6 == null) {
+        break missingId;
+      }
+
+      id = R.id.pbCore7;
+      ProgressBar pbCore7 = ViewBindings.findChildViewById(rootView, id);
+      if (pbCore7 == null) {
+        break missingId;
+      }
+
+      id = R.id.seekBarBrightness;
+      SeekBar seekBarBrightness = ViewBindings.findChildViewById(rootView, id);
+      if (seekBarBrightness == null) {
+        break missingId;
+      }
+
+      id = R.id.spinnerFilters;
+      Spinner spinnerFilters = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerFilters == null) {
+        break missingId;
+      }
+
+      id = R.id.switchParallel;
+      Switch switchParallel = ViewBindings.findChildViewById(rootView, id);
+      if (switchParallel == null) {
         break missingId;
       }
 
@@ -115,8 +243,10 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, btnProcess, btnUploadImage,
-          textureViewJava, textureViewPta, tvJavaTime, tvPtaTime);
+      return new ActivityMainBinding((LinearLayout) rootView, btnProcess, btnShowReport,
+          btnUploadImage, pbCore0, pbCore1, pbCore2, pbCore3, pbCore4, pbCore5, pbCore6, pbCore7,
+          seekBarBrightness, spinnerFilters, switchParallel, textureViewJava, textureViewPta,
+          tvJavaTime, tvPtaTime);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

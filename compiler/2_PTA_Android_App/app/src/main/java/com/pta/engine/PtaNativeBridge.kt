@@ -21,7 +21,10 @@ class PtaNativeBridge {
      */
     external fun processImageWithPta(
         inputBitmap: android.graphics.Bitmap,
-        outputBitmap: android.graphics.Bitmap
+        outputBitmap: android.graphics.Bitmap,
+        filterId: Int,
+        brightness: Int,
+        isParallel: Boolean
     ): Long
 
     /**

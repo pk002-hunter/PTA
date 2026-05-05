@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+array filter_options
 color black
 color purple_200
 color purple_500
@@ -9,13 +10,39 @@ color teal_700
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id btnCloseMonitor
+id btnCloseReport
+id btnExportPdf
 id btnProcess
+id btnShowReport
 id btnUploadImage
+id coreContainer
+id pbCore0
+id pbCore1
+id pbCore2
+id pbCore3
+id pbCore4
+id pbCore5
+id pbCore6
+id pbCore7
+id pbReportJavaCores
+id pbReportJavaTime
+id pbReportPtaCores
+id pbReportPtaTime
+id seekBarBrightness
+id spinnerFilters
+id switchParallel
 id textureViewJava
 id textureViewPta
 id tvJavaTime
 id tvPtaTime
+id tvReportConclusion
+id tvReportJavaTime
+id tvReportPtaCores
+id tvReportPtaTime
 layout activity_main
+layout dialog_cpu_monitor
+layout dialog_performance_report
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

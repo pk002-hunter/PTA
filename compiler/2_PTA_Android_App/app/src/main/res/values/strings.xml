@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PTA Engine</string>
+    <string-array name="filter_options">
+        <item>Brightness</item>
+        <item>Grayscale</item>
+        <item>Vintage</item>
+        <item>Gaussian Blur</item>
+    </string-array>
 </resources>

@@ -77,6 +77,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array filter_options
 attr SharedValue
 attr SharedValueId
 attr actionBarDivider
@@ -3153,7 +3154,11 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnCloseMonitor
+id btnCloseReport
+id btnExportPdf
 id btnProcess
+id btnShowReport
 id btnUploadImage
 id buttonPanel
 id cache_measures
@@ -3187,6 +3192,7 @@ id contentPanel
 id contiguous
 id continuousVelocity
 id coordinator
+id coreContainer
 id cos
 id counterclockwise
 id cradle
@@ -3404,6 +3410,18 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id pbCore0
+id pbCore1
+id pbCore2
+id pbCore3
+id pbCore4
+id pbCore5
+id pbCore6
+id pbCore7
+id pbReportJavaCores
+id pbReportJavaTime
+id pbReportPtaCores
+id pbReportPtaTime
 id peekHeight
 id percent
 id pin
@@ -3443,6 +3461,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seekBarBrightness
 id select_dialog_listview
 id selected
 id selection_type
@@ -3463,6 +3482,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerFilters
 id spline
 id split_action_bar
 id spread
@@ -3484,6 +3504,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id switchParallel
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3534,6 +3555,10 @@ id transition_transform
 id triangle
 id tvJavaTime
 id tvPtaTime
+id tvReportConclusion
+id tvReportJavaTime
+id tvReportPtaCores
+id tvReportPtaTime
 id unchecked
 id uniform
 id unlabeled
@@ -3688,6 +3713,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_cpu_monitor
+layout dialog_performance_report
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog

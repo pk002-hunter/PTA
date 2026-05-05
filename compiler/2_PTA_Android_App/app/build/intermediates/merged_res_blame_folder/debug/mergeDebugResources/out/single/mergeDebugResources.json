@@ -12,6 +12,18 @@
         "source": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-main-33:\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-debug-31:\\layout_dialog_cpu_monitor.xml.flat",
+        "source": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-main-33:\\layout\\dialog_cpu_monitor.xml"
+    },
+    {
+        "merged": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-debug-31:\\layout_dialog_performance_report.xml.flat",
+        "source": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-main-33:\\layout\\dialog_performance_report.xml"
+    },
+    {
+        "merged": "com.pta.engine.app-debug-31:/layout_dialog_performance_report.xml.flat",
+        "source": "com.pta.engine.app-main-33:/layout/dialog_performance_report.xml"
+    },
+    {
         "merged": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-debug-31:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-main-33:\\xml\\backup_rules.xml"
     },
@@ -20,15 +32,11 @@
         "source": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-main-33:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.pta.engine.app-debug-31:/layout_activity_main.xml.flat",
-        "source": "com.pta.engine.app-main-33:/layout/activity_main.xml"
+        "merged": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-debug-31:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-main-33:\\xml\\data_extraction_rules.xml"
     },
     {
         "merged": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-debug-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-main-33:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-debug-31:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-main-33:\\xml\\data_extraction_rules.xml"
     }
 ]

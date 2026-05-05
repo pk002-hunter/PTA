@@ -26,9 +26,9 @@ pta_process_image:
 
 
 
-mov w4, w0
+mov w10, w0
 
-mov w5, w1
+mov w11, w1
 
 mov x6, x2
 
@@ -44,9 +44,9 @@ ldr s8, [x6]
 
 
 
-mov w15, 50
-    dup v31.4s, w15
-    uqadd v9.4s, v8.4s, v31.4s
+// w4 now contains the dynamic brightness value passed from JNI
+    dup v31.8b, w4
+    uqadd v9.8b, v8.8b, v31.8b
 
 
 
@@ -70,19 +70,19 @@ add x7, x7, 4
 
 
 
-sub x4, x4, 1
+sub w10, w10, 1
 
-cmp x4, 0
+cmp w10, 0
 
 b.gt LOOP_START
 
 
 
-mov w4, w0
+mov w10, w0
 
-sub x5, x5, 1
+sub w11, w11, 1
 
-cmp x5, 0
+cmp w11, 0
 
 b.gt LOOP_START
 
