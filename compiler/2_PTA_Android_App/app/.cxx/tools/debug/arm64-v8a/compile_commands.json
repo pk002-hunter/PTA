@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/.cxx/Debug/4472m1b6/arm64-v8a",
+  "command": "C:\\Users\\india\\AppData\\Local\\Android\\Sdk\\ndk\\27.0.12077973\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/india/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dptanative_EXPORTS -IC:/Users/india/Desktop/compiler/2_PTA_Android_App/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -Wall -Werror -o CMakeFiles\\ptanative.dir\\pta_jni_bridge.cpp.o -c C:\\Users\\india\\Desktop\\compiler\\2_PTA_Android_App\\app\\src\\main\\cpp\\pta_jni_bridge.cpp",
+  "file": "C:\\Users\\india\\Desktop\\compiler\\2_PTA_Android_App\\app\\src\\main\\cpp\\pta_jni_bridge.cpp"
+},
+{
+  "directory": "C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/.cxx/Debug/4472m1b6/arm64-v8a",
+  "command": "C:\\Users\\india\\AppData\\Local\\Android\\Sdk\\ndk\\27.0.12077973\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe -target aarch64-none-linux-android24 --sysroot=C:/Users/india/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dptanative_EXPORTS -IC:/Users/india/Desktop/compiler/2_PTA_Android_App/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -o CMakeFiles\\ptanative.dir\\generated_logic.s.o -c C:\\Users\\india\\Desktop\\compiler\\2_PTA_Android_App\\app\\src\\main\\cpp\\generated_logic.s",
+  "file": "C:\\Users\\india\\Desktop\\compiler\\2_PTA_Android_App\\app\\src\\main\\cpp\\generated_logic.s"
+}
+]

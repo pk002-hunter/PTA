@@ -1,0 +1,4 @@
+# Simple test case
+LOAD %r1, #100
+ADD %r2, %r1, #50
+RET

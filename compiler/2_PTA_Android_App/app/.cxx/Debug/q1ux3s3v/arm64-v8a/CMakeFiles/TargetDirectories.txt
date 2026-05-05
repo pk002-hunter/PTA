@@ -1,0 +1,3 @@
+C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/.cxx/Debug/q1ux3s3v/arm64-v8a/CMakeFiles/ptanative.dir
+C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/.cxx/Debug/q1ux3s3v/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/.cxx/Debug/q1ux3s3v/arm64-v8a/CMakeFiles/rebuild_cache.dir

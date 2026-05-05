@@ -1,0 +1,49 @@
+# Portable Typed Assembly (PTA) - Brightness Adjustment Filter
+# Input: Camera frame buffer (YUV or RGB)
+# Output: Brightness-adjusted frame
+
+# Register usage:
+# %r1-%r8: 32-bit data registers (pixel values)
+# %pixel_in: Input pixel buffer pointer
+# %pixel_out: Output pixel buffer pointer
+# %width: Image width in pixels
+# %height: Image height in pixels
+
+# Load image dimensions and pointers
+LOAD %r1, %width
+LOAD %r2, %height
+LOAD %r3, %pixel_in
+LOAD %r4, %pixel_out
+
+# Main processing loop - iterate through all pixels
+LOOP_START:
+    # Load current pixel value (assume 8-bit per channel)
+    LOAD %r5, [%r3]
+
+    # Brightness adjustment: pixel_value + 50 (clamp to 255)
+    ADD %r6, %r5, #50
+
+    # Clamp to maximum 255 (saturating add)
+    CMP %r6, #255
+    MOV_IF_GT %r6, #255
+
+    # Store adjusted pixel
+    STORE [%r4], %r6
+
+    # Increment pointers (4 bytes for RGBA_8888)
+    ADD %r3, %r3, #4
+    ADD %r4, %r4, #4
+
+    # Decrement counter and check loop condition
+    SUB %r1, %r1, #1
+    CMP %r1, #0
+    JMP_GT LOOP_START
+
+    # Reset width counter for next row
+    LOAD %r1, %width
+    SUB %r2, %r2, #1
+    CMP %r2, #0
+    JMP_GT LOOP_START
+
+# End of processing
+RET

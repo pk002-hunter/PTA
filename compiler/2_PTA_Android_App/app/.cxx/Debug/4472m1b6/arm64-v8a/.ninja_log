@@ -1,0 +1,19 @@
+# ninja log v5
+0	1433	7983278071464060	CMakeFiles/ptanative.dir/pta_jni_bridge.cpp.o	bdbb68a3150af769
+5	71	7983278661838151	CMakeFiles/ptanative.dir/generated_logic.s.o	f352969ab21a4107
+71	189	7983278662918213	C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/build/intermediates/cxx/Debug/4472m1b6/obj/arm64-v8a/libptanative.so	f6813cf1aeac0361
+39	2100	7996190881443052	CMakeFiles/ptanative.dir/pta_jni_bridge.cpp.o	bdbb68a3150af769
+5	42	7996191281279894	CMakeFiles/ptanative.dir/generated_logic.s.o	f352969ab21a4107
+42	399	7996191284782602	C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/build/intermediates/cxx/Debug/4472m1b6/obj/arm64-v8a/libptanative.so	f6813cf1aeac0361
+8	39	7996195609010853	CMakeFiles/ptanative.dir/generated_logic.s.o	f352969ab21a4107
+40	132	7996195609886233	C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/build/intermediates/cxx/Debug/4472m1b6/obj/arm64-v8a/libptanative.so	f6813cf1aeac0361
+6	43	7996199761284916	CMakeFiles/ptanative.dir/generated_logic.s.o	f352969ab21a4107
+44	157	7996199762375476	C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/build/intermediates/cxx/Debug/4472m1b6/obj/arm64-v8a/libptanative.so	f6813cf1aeac0361
+7	43	7996200225353602	CMakeFiles/ptanative.dir/generated_logic.s.o	f352969ab21a4107
+44	141	7996200226246044	C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/build/intermediates/cxx/Debug/4472m1b6/obj/arm64-v8a/libptanative.so	f6813cf1aeac0361
+5	32	7996200537952388	CMakeFiles/ptanative.dir/generated_logic.s.o	f352969ab21a4107
+32	123	7996200538798535	C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/build/intermediates/cxx/Debug/4472m1b6/obj/arm64-v8a/libptanative.so	f6813cf1aeac0361
+14	80	7996200961792713	CMakeFiles/ptanative.dir/generated_logic.s.o	f352969ab21a4107
+81	280	7996200963583603	C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/build/intermediates/cxx/Debug/4472m1b6/obj/arm64-v8a/libptanative.so	f6813cf1aeac0361
+13	90	7996201388725342	CMakeFiles/ptanative.dir/generated_logic.s.o	f352969ab21a4107
+91	291	7996201390563817	C:/Users/india/Desktop/compiler/2_PTA_Android_App/app/build/intermediates/cxx/Debug/4472m1b6/obj/arm64-v8a/libptanative.so	f6813cf1aeac0361

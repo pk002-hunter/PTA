@@ -1,0 +1,88 @@
+================================================================================
+TEAM WORKLOAD DIVISION: PTA COMPILER PROJECT
+4-Member Equal Distribution (PBL Framework)
+================================================================================
+
+This document ensures that every team member contributes to both the 
+CORE COMPILER DESIGN and the ANDROID APPLICATION DEVELOPMENT.
+
+--------------------------------------------------------------------------------
+
+MEMBER 1: THE FRONT-END & UI ARCHITECT
+Focus: Lexical Analysis & User Input
+
+COMPILER TASKS (Frontend):
+- Lexical Analysis (lexer.cpp): Enhance the scanner to support new tokens 
+  (identifiers, symbols, and labels).
+- Syntax Guard: Implement basic checks to ensure the input TASM code 
+  follows the correct format.
+
+APPLICATION TASKS:
+- Android UI Design: Build the XML layouts for the image processing screen.
+- Image Selector: Implement the logic to pick images from the phone gallery.
+
+LEARNING GOAL: Understanding how raw text is converted into structured tokens.
+
+--------------------------------------------------------------------------------
+
+MEMBER 2: THE MIDDLE-END & PERFORMANCE ANALYST
+Focus: Optimization & Benchmarking
+
+COMPILER TASKS (Middle-End):
+- Optimizer Logic (optimizer.cpp): Own the "Safety-Stripping" logic. 
+  Implement pattern matching to identify redundant instructions.
+- Logic Simplification: Research and implement constant folding (e.g., 
+  simplifying 10+20 to 30 at compile time).
+
+APPLICATION TASKS:
+- Benchmarking Engine: Write the code that calculates processing time 
+  (Java vs. PTA) and displays the speed comparison.
+- Performance Logging: Track hardware metrics (ms/ns) across different images.
+
+LEARNING GOAL: Understanding code transformation and performance efficiency.
+
+--------------------------------------------------------------------------------
+
+MEMBER 3: THE BACK-END & HARDWARE SPECIALIST
+Focus: Register Mapping & JNI Bridge
+
+COMPILER TASKS (Back-End Phase 1):
+- Register Allocation (mapper.cpp): Manage the translation from virtual 
+  registers (%r) to physical registers (x0, w0).
+- SIMD Vectorization: Implement the logic that maps standard ADD 
+  instructions to NEON "uqadd" instructions.
+
+APPLICATION TASKS:
+- JNI Bridge (pta_jni_bridge.cpp): Manage the C++ to Kotlin communication. 
+  Ensure memory (pixels) is passed safely to the assembly code.
+- NDK Build Config: Maintain the CMakeLists.txt and build settings.
+
+LEARNING GOAL: Understanding the interaction between software and CPU hardware.
+
+--------------------------------------------------------------------------------
+
+MEMBER 4: THE GENERATOR & QUALITY ASSURANCE
+Focus: Code Generation & Technical Assets
+
+COMPILER TASKS (Back-End Phase 2):
+- Assembly Emission (emitter.cpp): Handle the creation of the .s file. 
+  Manage the Function Prologue/Epilogue and stack alignment.
+- Symbol Export: Ensure the compiler correctly labels functions so they 
+  are visible to the Android system.
+
+APPLICATION TASKS:
+- TASM Filter Library: Write the library of filter scripts (Brightness, 
+  Grayscale, Vintage) in our new assembly language.
+- Documentation Lead: Manage the final technical report (Word file) 
+  explaining the project's architecture.
+
+LEARNING GOAL: Understanding how a compiler delivers an executable binary.
+
+--------------------------------------------------------------------------------
+
+SUMMARY OF COLLABORATION:
+1. Member 1 parses the input.
+2. Member 2 cleans and optimizes the logic.
+3. Member 3 maps the logic to the phone's hardware.
+4. Member 4 writes the final machine code and verifies the output.
+================================================================================

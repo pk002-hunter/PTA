@@ -1,0 +1,2 @@
+ninja: Entering directory `C:\Users\india\Desktop\compiler\2_PTA_Android_App\app\.cxx\Debug\4472m1b6\arm64-v8a'
+ninja: no work to do.

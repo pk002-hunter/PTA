@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-mergeDebugResources-30:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\india\\.gradle\\daemon\\8.13\\com.pta.engine.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.pta.engine.app-mergeDebugResources-30:/layout/activity_main.xml",
+        "source": "com.pta.engine.app-main-33:/layout/activity_main.xml"
+    }
+]

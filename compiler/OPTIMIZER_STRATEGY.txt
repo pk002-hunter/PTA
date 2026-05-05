@@ -1,0 +1,72 @@
+================================================================================
+TECHNICAL NOTE: THE "SAFETY-STRIPPING" OPTIMIZER STRATEGY
+Project: PTA Compiler (Project-Based Learning)
+================================================================================
+
+1. THE PROBLEM: "THE OVERFLOW CRISIS"
+-------------------------------------
+When we first designed the brightness filter, we found a major issue: 
+Standard computer math is "circular." 
+
+Example:
+   If a pixel is 250 and we add 50, the result isn't 300. 
+   Because 8-bit colors only go up to 255, the math "wraps around" and 
+   the result becomes 44. This made our processed images look grainy 
+   and "broken."
+
+2. THE "SAFE" (BUT SLOW) SOLUTION
+---------------------------------
+The standard way to fix this is to add "Safety Checks" in the code:
+   1. Add the numbers.
+   2. Check if the result is > 255.
+   3. If yes, force it back to 255.
+
+This works, but it's slow because the CPU has to "stop and think" (CMP/JMP) 
+for every single pixel in the 4K image.
+
+3. OUR INNOVATION: "THE HARDWARE TRUST"
+---------------------------------------
+We discovered that the ARM64 processor (Snapdragon 8 Gen 4) has a special 
+instruction called `uqadd` (Unsigned Saturating Add). 
+
+Hardware Saturation means:
+   If you try to go over 255, the hardware "clamps" it for you automatically.
+
+OUR STRATEGY:
+We decided that instead of writing complex math logic in our compiler, 
+we would "trust the hardware."
+
+4. HOW WE IMPLEMENTED IT IN OPTIMIZER.CPP
+-----------------------------------------
+Since we were building this from scratch, we used a technique called 
+"Pattern Matching."
+
+Step A: Identification
+   The Optimizer looks for the two instructions that represent a "Safety Net":
+   - CMP (Compare)
+   - MOV_IF_GT (Move if Greater Than)
+
+Step B: The "Strip"
+   If the Optimizer sees those instructions right after an addition, it 
+   says: "Wait! The Mapper is already going to use the `uqadd` instruction, 
+   so these two lines are now useless."
+   
+   It then "strips" them (converts them to comments) so the CPU never 
+   even sees them.
+
+5. WHY THIS IS A SMART DESIGN CHOICE
+------------------------------------
+- SIMPLICITY: We don't have to write complex "If/Else" logic in our 
+  compiler's back-end.
+- ZERO OVERHEAD: Our final code has NO branches. The CPU just runs at full 
+  speed without stopping to check for errors.
+- QUALITY: The hardware ensures the image is perfect (no wrap-around grainy 
+  pixels).
+
+6. SUMMARY FOR PRESENTATION
+---------------------------
+"We chose to implement a 'Safety-Stripping' optimizer. Instead of checking 
+for math errors in software, we taught our compiler to identify redundant 
+code and remove it, allowing the ARM64 hardware to handle the safety 
+automatically. This reduced our code size and increased our performance."
+================================================================================
