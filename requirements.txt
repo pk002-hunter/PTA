@@ -1,0 +1,13 @@
+# PTA Project Requirements
+
+Note: As this is primarily a C++ and Android ecosystem project rather than a Python module, these are system-level dependencies.
+
+## Desktop Compiler Requirements
+CMake >= 3.16
+C++ Compiler with C++17 support (e.g., GCC, Clang, MSVC)
+
+## Android App Requirements
+Android Studio (Latest Version Recommended)
+Android SDK
+Android NDK (Native Development Kit)
+Java Development Kit (JDK) 11 or higher
