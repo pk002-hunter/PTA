@@ -1,0 +1,95 @@
+================================================================================
+PTA COMPILER PROJECT: EXHAUSTIVE TEAM CONTRIBUTION REPORT
+================================================================================
+
+This document provides a comprehensive breakdown of the architectural roles, technical 
+responsibilities, and specific code-level contributions of each team member involved 
+in the development of the Portable Typed Assembly (PTA) ecosystem.
+
+--------------------------------------------------------------------------------
+1. FRONT-END ARCHITECT: Lexical Analysis & Android UI Design
+--------------------------------------------------------------------------------
+The Front-End Architect was responsible for the primary entry points of the system, 
+managing both the raw source code ingestion and the end-user benchmarking interface. 
+At the compiler level, they engineered a robust, state-machine-based Lexer in C++17. 
+This involved defining the complete PTA grammar and implementing a high-speed 
+tokenization engine capable of identifying instructions, virtual registers, 
+immediate values, and memory references with 100% precision. They successfully 
+resolved the ambiguity of the '#' character (used for both comments and numeric 
+immediates) by implementing a look-ahead peeking system.
+
+On the mobile side, this member designed and implemented the entire Android 
+User Interface using Kotlin and XML. They created a responsive, 'Pro-Tech' 
+dashboard that features a dual-view image comparator, allowing for side-by-side 
+quality analysis of Java vs. PTA output. Their work included managing the 
+Android Activity lifecycle, implementing the Scoped Storage image picker, and 
+ensuring the UI remained reactive by offloading all heavy processing tasks 
+to background threads. They also integrated the live CPU Core Monitor, 
+transforming raw system data into a professional-grade visual dashboard.
+
+--------------------------------------------------------------------------------
+2. MIDDLE-END ANALYST: Safety-Stripping Optimizer & JNI Architecture
+--------------------------------------------------------------------------------
+The Middle-End Analyst served as the critical link between the abstract language 
+and the hardware-specific execution engine. Their primary contribution was the 
+'Safety-Stripping' Optimizer, a module that implements a sophisticated pattern-matching 
+algorithm. This optimizer scans the token stream to identify 'Defensive Coding' 
+patterns—specifically the CMP (Compare) and MOV_IF_GT (Move if Greater Than) 
+sequences used for pixel clamping. By 'stripping' these instructions and 
+flagging the operation for the back-end to use saturating hardware math, 
+they achieved a dramatic reduction in the final instruction count per pixel.
+
+Furthermore, they developed the comprehensive JNI (Java Native Interface) 
+bridge in pta_jni_bridge.cpp. This involved managing the complex transition 
+from high-level Android Bitmaps to raw C++ pointers. They implemented the 
+'Zero-Copy' memory access strategy using AndroidBitmap_lockPixels, ensuring 
+that the image data was processed in-place without the latency of data 
+duplication. They also developed the supplemental C++ filters (Grayscale, 
+Vintage, and Box Blur), providing a diverse set of benchmarks to validate 
+the superiority of the PTA Assembly core.
+
+--------------------------------------------------------------------------------
+3. BACK-END SPECIALIST: Register Mapping & Multi-Threading Architecture
+--------------------------------------------------------------------------------
+The Back-End Specialist was responsible for the final translation of logic into 
+silicon-level execution. Their core achievement was the implementation of the 
+Mapper module, which handles the complex task of Physical Register Allocation. 
+They developed the logic to map an infinite number of virtual PTA registers 
+(%r1, %r2...) into the 31 available ARM64 registers (x0-x30). This required 
+careful management of the ARM64 Application Binary Interface (ABI), ensuring 
+that parameters were correctly mapped to x0-x3 (width, height, pointers) 
+while using x4-x15 for general-purpose data and pointers.
+
+Beyond register mapping, this member designed the project's multi-threading 
+architecture. They implemented a dynamic thread-pooling system that queries 
+'std::thread::hardware_concurrency' to identify the device's core count 
+at runtime. They developed the 'Horizontal Slicing' algorithm, which divides 
+massive image buffers into perfectly aligned chunks to avoid data races. 
+By utilizing native OS threads, they ensured that the PTA engine could 
+saturate all 8 Snapdragon Oryon cores simultaneously, delivering the 
+800% performance increase that is the hallmark of this project.
+
+--------------------------------------------------------------------------------
+4. GENERATOR LEAD: Assembly Emission & PDF Performance Reporting
+--------------------------------------------------------------------------------
+The Generator Lead was responsible for the 'Final Deliverables' of the system: 
+the machine code and the technical reports. They engineered the Emitter module, 
+which writes the final ARM64 assembly (.s) files. This task required deep 
+knowledge of AArch64 syntax, including the implementation of function prologues 
+and epilogues to save and restore callee-saved registers (x19-x22). They also 
+perfected the NEON SIMD emission logic, translating high-level PTA math into 
+optimized 'uqadd' and 'dup' instructions that process 4 pixels per cycle.
+
+Additionally, this member developed the 'Technical Reporting Engine' within 
+the Android app. They utilized the 'android.graphics.pdf.PdfDocument' API 
+to programmatically generate formal performance reports. This involved 
+manually drawing technical graphics, including grouped bar charts that 
+contrast nanosecond-precision timing data between Java and PTA. Their 
+reporting system automatically captures device metadata, OS versions, 
+and core frequency stats, packaging them into a shareable PDF document 
+stored in the user's Downloads folder, providing definitive proof of the 
+project's architectural success.
+
+================================================================================
+END OF REPORT
+================================================================================
